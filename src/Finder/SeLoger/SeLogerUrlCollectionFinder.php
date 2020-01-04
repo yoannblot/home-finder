@@ -12,9 +12,7 @@ final class SeLogerUrlCollectionFinder implements UrlCollectionFinder
 
     public function find(SearchCriteria $criteria)
     : iterable {
-        $url = $this->generateUrl($criteria);
-
-        return [$url];
+        return [$this->generateUrl($criteria)];
     }
 
     private function generateUrl(SearchCriteria $criteria)
